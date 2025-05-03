@@ -10,8 +10,14 @@
     <height>469</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Редактор уровней v.1.0</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="connect_frame">
@@ -24,7 +30,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 250, 226);</string>
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -33,6 +39,9 @@
      <enum>QFrame::Raised</enum>
     </property>
     <widget class="QLineEdit" name="lineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -47,10 +56,16 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>data\database.db</string>
      </property>
     </widget>
     <widget class="QPushButton" name="review_but">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -65,7 +80,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(230, 242, 255);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Обзор</string>
@@ -100,7 +115,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(246, 255, 251);</string>
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -123,7 +138,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QTableWidget" name="tableWidget">
@@ -136,16 +151,16 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QWidget" name="verticalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>130</y>
+       <x>350</x>
+       <y>70</y>
        <width>160</width>
-       <height>241</height>
+       <height>159</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -159,10 +174,19 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(248, 240, 255);</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Создать Новый</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
         </property>
        </widget>
       </item>
@@ -176,7 +200,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(248, 229, 230);</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Очистить</string>
@@ -193,7 +217,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(248, 229, 230);</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Сохранить</string>
@@ -201,7 +225,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="cancel_but">
+       <widget class="QPushButton" name="delete_but">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -210,10 +234,10 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(248, 229, 230);</string>
+         <string notr="true"/>
         </property>
         <property name="text">
-         <string>Отменить</string>
+         <string>Удалить</string>
         </property>
        </widget>
       </item>
@@ -236,39 +260,6 @@
      <property name="text">
       <string>Название карты:</string>
      </property>
-    </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>40</y>
-       <width>201</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="l_player">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="l_star">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="l_pole">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </widget>
   </widget>
