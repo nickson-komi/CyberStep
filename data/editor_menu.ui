@@ -38,7 +38,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="path_file">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -47,7 +47,7 @@
        <x>110</x>
        <y>20</y>
        <width>350</width>
-       <height>25</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="font">
@@ -71,7 +71,7 @@
        <x>470</x>
        <y>20</y>
        <width>60</width>
-       <height>24</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="font">
@@ -92,7 +92,7 @@
        <x>20</x>
        <y>20</y>
        <width>81</width>
-       <height>21</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="font">
@@ -123,7 +123,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="mapsBox">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -141,7 +141,7 @@
       <string notr="true"/>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="levelMapTable">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -157,10 +157,10 @@
     <widget class="QWidget" name="verticalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>340</x>
        <y>70</y>
-       <width>160</width>
-       <height>159</height>
+       <width>183</width>
+       <height>188</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -182,11 +182,16 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="map_name">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
         </property>
        </widget>
       </item>
@@ -204,6 +209,20 @@
         </property>
         <property name="text">
          <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QCheckBox" name="check_passing">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Уровень пройден</string>
         </property>
        </widget>
       </item>
