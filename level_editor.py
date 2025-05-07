@@ -40,11 +40,11 @@ class EditWindow(QMainWindow):
                 self.levelMapTable.setItem(i, j, QTableWidgetItem(str(elem)))
 
     def save_map(self):
-        #save_maps(self.current_id, self.map_name.Text(), texture, status)
         for row in range(self.levelMapTable.rowCount()):
             for cols in range(self.levelMapTable.columnCount()):
-                #self.levelMapTable.cell(row, cols)
-                print(row, cols)
+                print(self.levelMapTable.itemAt(row, cols).text(), end=' ')
+            print()
+
 
 
 if __name__ == '__main__':

@@ -124,10 +124,8 @@ class Player(pygame.sprite.Sprite):
 
         if pygame.sprite.spritecollideany(self, void_group):  # если коснулся пустоты
             self.opp_move = False
-        if pygame.sprite.spritecollideany(self, stars_group):  # если коснулся звезды
+        if pygame.sprite.spritecollide(self, stars_group, True):  # если коснулся звезды
             self.coll_stars += 1  # добавляем звезду в счёт
-            for name in stars_group:  # перебор всех обьектов группы Stars
-                name.checkout()
 
 
 class Star(pygame.sprite.Sprite):
@@ -136,10 +134,6 @@ class Star(pygame.sprite.Sprite):
         self.image = star_image
         self.rect = self.image.get_rect().move(
             tile_width * pos_x, tile_height * pos_y)
-
-    def checkout(self):
-        if pygame.sprite.spritecollideany(self, player_group):  # если коснулась игрока
-            Star.kill(self)
 
 
 def terminate():
